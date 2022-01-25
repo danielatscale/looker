@@ -19,6 +19,12 @@ view: Workshop_DG {
         sql: ${TABLE}.`Style`;;
     }
 
+    dimension: Weight_Hierarchy_Weight_Level {
+        label: "Weight Level"
+        type: string
+        sql: ${TABLE}.`Weight Level`;;
+    }
+
     dimension: d_gender {
         label: "Gender"
         group_label: "Customer Attributes"
