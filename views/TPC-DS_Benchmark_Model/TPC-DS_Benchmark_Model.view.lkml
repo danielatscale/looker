@@ -545,7 +545,7 @@ view: TPC_DS_Benchmark_Model {
     measure: Total_Quantity_Sold {
         label: "Total Quantity Sold"
         group_label: "Total Sales Measures"
-        type: count_distinct
+        type: average
         sql: ${TABLE}.`Total Quantity Sold`;;
     }
 
