@@ -535,6 +535,13 @@ view: TPC_DS_Benchmark_Model {
         sql: ${TABLE}.`Store and Web Purchased Amount`;;
     }
 
+    measure: m_WS_EXT_LIST_PRICE_sum {
+        label: "Ws Ext List Price - DG"
+        group_label: "Store Sales Measures"
+        type: sum
+        sql: ${TABLE}.`m_WS_EXT_LIST_PRICE_sum`;;
+    }
+
     measure: Total_Net_Profit {
         label: "Total Net Profit"
         group_label: "Total Sales Measures"
