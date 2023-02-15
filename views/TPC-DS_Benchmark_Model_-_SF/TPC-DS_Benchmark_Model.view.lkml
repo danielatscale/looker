@@ -461,6 +461,13 @@ view: TPC_DS_Benchmark_Model {
         sql: ${TABLE}.`m_purchased_amount_in_store`;;
     }
 
+    measure: m_SS_EXT_DISCOUNT_AMT_sum {
+        label: "Ss Ext Discount Amount"
+        group_label: "Store Sales Measures"
+        type: sum
+        sql: ${TABLE}.`m_SS_EXT_DISCOUNT_AMT_sum`;;
+    }
+
     measure: m_store_coupon_amt_sum {
         label: "Store Coupon Amount"
         group_label: "Store Sales Measures"
