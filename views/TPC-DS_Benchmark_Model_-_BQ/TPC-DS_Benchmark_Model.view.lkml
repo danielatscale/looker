@@ -535,11 +535,32 @@ view: TPC_DS_Benchmark_Model {
         sql: ${TABLE}.`Store and Web Purchased Amount`;;
     }
 
-    measure: m_WS_EXT_DISCOUNT_AMT_sum_2 {
-        label: "Ws Ext Discount Amount -DG"
+    measure: m_WS_BILL_CUSTOMER_SK_sum {
+        label: "Ws Bill Customer Sk -DG"
         group_label: "Store Sales Measures"
         type: sum
-        sql: ${TABLE}.`m_WS_EXT_DISCOUNT_AMT_sum_2`;;
+        sql: ${TABLE}.`m_WS_BILL_CUSTOMER_SK_sum`;;
+    }
+
+    measure: m_WS_EXT_LIST_PRICE_sum {
+        label: "Ws Ext List Price - DG"
+        group_label: "Store Sales Measures"
+        type: sum
+        sql: ${TABLE}.`m_WS_EXT_LIST_PRICE_sum`;;
+    }
+
+    measure: m_WS_LIST_PRICE_sum {
+        label: "Ws List Price - DG"
+        group_label: "Store Sales Measures"
+        type: sum
+        sql: ${TABLE}.`m_WS_LIST_PRICE_sum`;;
+    }
+
+    measure: m_WS_QUANTITY_sum_2 {
+        label: "Ws Quantity - DB"
+        group_label: "Store Sales Measures"
+        type: sum
+        sql: ${TABLE}.`m_WS_QUANTITY_sum_2`;;
     }
 
     measure: Total_Net_Profit {
@@ -554,6 +575,14 @@ view: TPC_DS_Benchmark_Model {
         group_label: "Total Sales Measures"
         type: count_distinct
         sql: ${TABLE}.`Total Quantity Sold`;;
+    }
+
+    measure: m_WS_EXT_SALES_PRICE_sum {
+        label: "Ws Ext Sales Price - DG"
+        group_label: "Total Sales Measures"
+        description: "Foo"
+        type: sum
+        sql: ${TABLE}.`m_WS_EXT_SALES_PRICE_sum`;;
     }
 
     measure: Average_Web_Unit_Net_Profit {
@@ -668,6 +697,21 @@ view: TPC_DS_Benchmark_Model {
         group_label: "Web Sales Measures"
         type: sum
         sql: ${TABLE}.`m_WS Row Counter_sum`;;
+    }
+
+    measure: m_WS_ORDER_NUMBER_sum {
+        label: "Ws Order Number"
+        group_label: "Web Sales Measures"
+        type: sum
+        sql: ${TABLE}.`m_WS_ORDER_NUMBER_sum`;;
+    }
+
+    measure: m_WS_WHOLESALE_COST_sum {
+        label: "Ws Whole Sale Cost - DG"
+        group_label: "Web Sales Measures"
+        description: "jkfsdlfhjldskfjl"
+        type: sum
+        sql: ${TABLE}.`m_WS_WHOLESALE_COST_sum`;;
     }
 
 }
