@@ -468,6 +468,20 @@ view: TPC_DS_Benchmark_Model {
         sql: ${TABLE}.`m_SS_EXT_DISCOUNT_AMT_sum`;;
     }
 
+    measure: m_SS_SALES_PRICE_sum {
+        label: "Ss Sales Price - DG"
+        group_label: "Store Sales Measures"
+        type: sum
+        sql: ${TABLE}.`m_SS_SALES_PRICE_sum`;;
+    }
+
+    measure: m_SS_WHOLESALE_COST_sum {
+        label: "Ss Whole Sale Cost - DG"
+        group_label: "Store Sales Measures"
+        type: sum
+        sql: ${TABLE}.`m_SS_WHOLESALE_COST_sum`;;
+    }
+
     measure: m_store_coupon_amt_sum {
         label: "Store Coupon Amount"
         group_label: "Store Sales Measures"
@@ -542,6 +556,27 @@ view: TPC_DS_Benchmark_Model {
         sql: ${TABLE}.`Store and Web Purchased Amount`;;
     }
 
+    measure: m_SS_COUPON_AMT_sum {
+        label: "Ss Co Up On Amount - DG"
+        group_label: "Total Sales Measures"
+        type: sum
+        sql: ${TABLE}.`m_SS_COUPON_AMT_sum`;;
+    }
+
+    measure: m_SS_EXT_DISCOUNT_AMT_sum_2 {
+        label: "Ss Ext Discount Amount"
+        group_label: "Total Sales Measures"
+        type: sum
+        sql: ${TABLE}.`m_SS_EXT_DISCOUNT_AMT_sum_2`;;
+    }
+
+    measure: m_SS_EXT_LIST_PRICE_sum {
+        label: "Ss Ext List Price"
+        group_label: "Total Sales Measures"
+        type: sum
+        sql: ${TABLE}.`m_SS_EXT_LIST_PRICE_sum`;;
+    }
+
     measure: Total_Net_Profit {
         label: "Total Net Profit"
         group_label: "Total Sales Measures"
@@ -568,6 +603,13 @@ view: TPC_DS_Benchmark_Model {
         group_label: "Web Sales Measures"
         type: sum
         sql: ${TABLE}.`m_purchased_amount_on_web`;;
+    }
+
+    measure: m_SS_EXT_WHOLESALE_COST_sum {
+        label: "Ss Ext Whole Sale Cost - DG"
+        group_label: "Web Sales Measures"
+        type: sum
+        sql: ${TABLE}.`m_SS_EXT_WHOLESALE_COST_sum`;;
     }
 
     measure: m_ws_ext_discount_amt_sum {
